@@ -1,23 +1,17 @@
-const express = require('express');
-const bodyParser = require('body-parser');
-const path = require('path');
+var express = require('express');
+var app = express();
+var path = require('path');
 require('dotenv').config();
+var bodyParser = require('body-parser');
 
-const app = express();
-
-app.use(express.static(path.join(__dirname, 'build')));
+app.use(express.static(path.join(__dirname, "build")));
 app.use(bodyParser.json({ type: 'application/json' }));
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.get('/', (req, res) => {
+app.get('/', function (req, res) {
     res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
 
-app.listen(process.env.PORT || 8080, () => {
-    let currentPort = process.env.PORT;
-    if(currentPort) {
-        console.log(`listening on ${currentPort}`);
-    } else {
-        console.log('listening on localhost://8080');
-    }
+app.listen(process.env.PORT, () => {
+    console.log(`listening on ${process.env.PORT}`);
 });
