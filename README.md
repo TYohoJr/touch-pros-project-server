@@ -1,5 +1,5 @@
 # TouchPros Project Server
-TouchPros Project is a simple rendering of an HTML page version of a TouchWall screen. Features Buttons accessed from a local JSON file. This is the back-end code. The front-end can be found at [Eye Tracker](https://github.com/TYohoJr/touch-pros-project).
+TouchPros Project is a simple rendering of an HTML page version of a TouchWall screen. Features Buttons accessed from a local JSON file. This is the back-end code. The front-end can be found at [TouchPros Project](https://github.com/TYohoJr/touch-pros-project).
 
 ## Server Calls
 * `"/"` - Initial loading of the webpage
